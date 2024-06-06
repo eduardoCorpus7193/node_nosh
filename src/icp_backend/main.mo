@@ -9,9 +9,9 @@ actor {
     return "Hello, " # name # "!";
   };
 
-  public func editName(name : Text) : async Text {
+  public func setName(name : Text) : async Text {
     _name := name;
-    return "Name updated to " # name # ".";
+    return "Hola " # name # ".";
   };
 
   public func setTableName(name : Text) : async Text {
