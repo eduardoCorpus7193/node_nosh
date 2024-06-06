@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Products from './products';
+import Header from './components/header';
 import './index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Header />
     <App />
-    <Products />
   </React.StrictMode>,
 );

@@ -1,21 +1,14 @@
 import { useState } from 'react';
+import Products from './components/products';
 import { icp_backend } from 'declarations/icp_backend';
 
 function App() {
 
   const [mostrarComponente, setMostrarComponente] = useState(true);
+  const [mostrarTotal, setMostrarTotal] = useState(false);
 
-  // const [greeting, setGreeting] = useState('');
   const [setName, setSettedName] = useState('');
-
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   const name = event.target.elements.name.value;
-  //   icp_backend.greet(name).then((greeting) => {
-  //     setGreeting(greeting);
-  //   });
-  //   return false;
-  // }
+  const [total, setTotal] = useState('');
 
   function handleSubmitSetName(event) {
     event.preventDefault();
@@ -26,12 +19,36 @@ function App() {
     });
     return false;
   }
+
+  function finishOrder(event) {
+    event.preventDefault();
+    setMostrarTotal(true);
+    icp_backend.setTotal().then((newTotal) => {
+      setTotal(newTotal);
+    });
+    return false;
+  }
+
+  function finishDay(event) {
+    event.preventDefault();
+    icp_backend.finishDay().then((finishDayStr) => {
+      alert(finishDayStr);
+    });
+    return false;
+  }
+
   return (
 
     <main>
+      <h1>Node-Nosh</h1> 
+
       
-      <h1>Node-Nosh</h1>
-      
+
+      <div className={mostrarTotal ? "show-element" : null}>
+        {mostrarTotal &&
+          <><h3>Total: $<span id="totalSet">{total}</span></h3></>
+      }
+      </div>
 
       <div className={mostrarComponente ? "show-element" : null}>
         {mostrarComponente && 
@@ -42,8 +59,16 @@ function App() {
         </form>
         }
         <section id="setName">{setName}</section>
-        
       </div>
+      
+    
+      <Products />  
+
+      <div className='d-flex justify-content-around'>
+        <button onClick={finishOrder} type='submit' className='btn btn-outline-warning'>Finish order</button> 
+        <button onClick={finishDay} type='submit' className='btn btn-danger'>Finish day</button> 
+      </div>
+
     </main>
   );
 }
