@@ -4,11 +4,12 @@ import Nat "mo:base/Nat";
 actor {
   stable var _name : Text = "";
   stable var _table_name : Text = "";
-  stable var _subTotal : Float = 0.0;
-  stable var _total : Float = 0.0;
+  stable var _subTotal : Nat = 0;
+  stable var _total : Nat = 0;
   stable var _pedido : Nat = 0;
   stable var _dia : Nat = 0;
-  var diaStr : Text = "";
+  stable var _propina : Float = 0.0;
+  stable var _pedidos : Text = "";
   var pedidoStr : Text = "";
   var totalStr : Text = "";
 
@@ -26,32 +27,35 @@ actor {
     return "Table name set to " # name # ".";
   };
 
-  public func setSubTotal(subTotal : Float) : async Float {
+  public func setSubTotal(subTotal : Nat) : async Nat {
     _subTotal := _subTotal + subTotal;
   return _subTotal;
   };
 
   public func setTotal() : async Text {
     _total := _total + _subTotal;
-    _subTotal := 0.0;
-    totalStr := Float.toText(_total);
-    pedidoStr := Nat.toText(_pedido);
-    return "El total es de venta hasta ahora: " # totalStr # " y el numero de pedido es: " # pedidoStr;
+    _subTotal := 0;
+    return "El total es de venta hasta ahora: " # Nat.toText(_total) # ".00 y el numero de pedido es: " # Nat.toText(_pedido);
   };
   
-  public func endOrder() : async Float {
+  public func setPedidos () : async Text {
+    _pedidos := _pedidos # _table_name # ": " # Nat.toText(_subTotal);
+    return _pedidos;
+  };
+
+  public func endOrder() : async Nat {
     _pedido := _pedido + 1;
-    _subTotal := 0.0;
+    _subTotal := 0;
     return _subTotal;
   };
 
   public func finishDay() : async Text {
     _dia := _dia + 1;
-    totalStr := Float.toText(_total);
+    _propina := Float.fromInt(_total) * 0.10;
     pedidoStr := Nat.toText(_pedido);
-    diaStr := Nat.toText(_dia);
-    _total := 0.0;
+    totalStr := Nat.toText(_total);
+    _total := 0;
     _pedido := 0;
-    return "El total de ventas del dia" # diaStr # " es: " # totalStr # " y el numero de pedidos del dia fueron: " # pedidoStr;
+    return "El total de ventas del dia " # Nat.toText(_dia) # " es: " # totalStr # " y el numero de pedidos del dia fueron: " # pedidoStr # " y la propina esperada (10%) es de: " # Float.toText(_propina);
   };
 };

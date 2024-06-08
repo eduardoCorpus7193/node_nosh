@@ -3,7 +3,7 @@ import { icp_backend } from 'declarations/icp_backend';
 
 function Products() {
     //Quesadilla function
-    function handleSubmitQuesadilla(event) {
+    function handleSubmitMiso(event) {
         event.preventDefault()
         icp_backend.setSubTotal(40.0).then((subTotal) => {
             alert("The subtotal is " + subTotal);
@@ -12,7 +12,7 @@ function Products() {
     }
 
     //Ramen function
-    function handleSubmitRamen(event) {
+    function handleSubmitShio(event) {
         event.preventDefault()
         icp_backend.setSubTotal(65.0).then((subTotal) => {
             alert("The subtotal is " + subTotal);
@@ -21,7 +21,7 @@ function Products() {
     }
 
     //Taco function
-    function handleSubmitTaco(event) {
+    function handleSubmitShoyu(event) {
         event.preventDefault()
         icp_backend.setSubTotal(15.0).then((subTotal) => {
             alert("The subtotal is " + subTotal);
@@ -30,7 +30,7 @@ function Products() {
     }
 
     //Torta function
-    function handleSubmitTorta(event) {
+    function handleSubmitTonkotsu(event) {
         event.preventDefault()
         icp_backend.setSubTotal(55.0).then((subTotal) => {
             alert("The subtotal is " + subTotal);
@@ -40,20 +40,21 @@ function Products() {
 
     return (  
         <div>
-            <form action="#" onSubmit={handleSubmitQuesadilla}>
-                <h2>Quesadilla</h2> <h3>....$50</h3>
+            <form action="#" onSubmit={handleSubmitMiso}>
+                <h2>Ramen Miso</h2> <h3>....$50</h3>
+                <p>Se caracteriza por su</p>
                 <button type="submit" className="btn btn-info">+</button>
             </form>
             <form action="#" onSubmit={handleSubmitRamen}>
-                <h2>Ramen</h2> <h3>......$65</h3>
+                <h2>Ramen Shio</h2> <h3>......$65</h3>
                 <button type="submit" className="btn btn-info">+</button>
             </form>
             <form action="#" onSubmit={handleSubmitTaco}>
-                <h2>Taco</h2> <h3>......$15</h3>
+                <h2>Ramen Shoyu</h2> <h3>......$15</h3>
                 <button type="submit" className="btn btn-info">+</button>
             </form>
             <form action="#" onSubmit={handleSubmitTorta}>
-                <h2>Torta</h2> <h3>......$55</h3>
+                <h2>Ramen Tonkotsu</h2> <h3>......$55</h3>
                 <button type="submit" className="btn btn-info">+</button>
             </form>
         </div>
