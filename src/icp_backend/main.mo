@@ -24,7 +24,7 @@ actor {
 
   public func setTableName(name : Text) : async Text {
     _table_name := name;
-    return "Table name set to " # name # ".";
+    return "Nombre de la mesa: " # name # ".";
   };
 
   public func setSubTotal(subTotal : Nat) : async Nat {
@@ -35,7 +35,10 @@ actor {
   public func setTotal() : async Text {
     _total := _total + _subTotal;
     _subTotal := 0;
-    return "El total es de venta hasta ahora: " # Nat.toText(_total) # ".00 y el numero de pedido es: " # Nat.toText(_pedido);
+    if (_pedido == 0) {
+      _pedido := 1;
+    };
+    return "El total es de venta hasta ahora: " # Nat.toText(_total) # ".00 y el numero de pedido del dia " # Nat.toText(_dia) #" es: " # Nat.toText(_pedido);
   };
   
   public func setPedidos () : async Text {

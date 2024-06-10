@@ -35,3 +35,16 @@ button[type="submit"] {
 #greeting:empty {
   display: none;
 }
+
+.menu {
+  background-color: lightgray;
+  margin-left: 26%;
+  margin-right: 30%;
+  border-radius: 5%;
+  border: 5px solid black;
+  padding-top: 35px;
+}
+
+.card-text {
+  font-size: medium;
+}
