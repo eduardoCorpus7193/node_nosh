@@ -175,24 +175,7 @@ function App() {
                 <p className="text-fooder"><span className="bi bi-telephone"></span> Teléfono: 4495103420</p>
             </div>
         </footer>
-    </div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-      
+    </div>  
 
     </main>
   );

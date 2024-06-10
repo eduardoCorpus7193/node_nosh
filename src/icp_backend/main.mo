@@ -7,9 +7,10 @@ actor {
   stable var _subTotal : Nat = 0;
   stable var _total : Nat = 0;
   stable var _pedido : Nat = 0;
-  stable var _dia : Nat = 0;
+  stable var _dia : Nat = 1;
   stable var _propina : Float = 0.0;
   stable var _pedidos : Text = "";
+  var diaStr : Text = "";
   var pedidoStr : Text = "";
   var totalStr : Text = "";
 
@@ -53,6 +54,7 @@ actor {
   };
 
   public func finishDay() : async Text {
+    diaStr := Nat.toText(_dia);
     _dia := _dia + 1;
     _propina := Float.fromInt(_total) * 0.10;
     pedidoStr := Nat.toText(_pedido);
