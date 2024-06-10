@@ -36,9 +36,7 @@ actor {
   public func setTotal() : async Text {
     _total := _total + _subTotal;
     _subTotal := 0;
-    if (_pedido == 0) {
-      _pedido := 1;
-    };
+    _pedido := _pedido + 1;
     return "El total es de venta hasta ahora: " # Nat.toText(_total) # ".00 y el numero de pedido del dia " # Nat.toText(_dia) #" es: " # Nat.toText(_pedido);
   };
   
