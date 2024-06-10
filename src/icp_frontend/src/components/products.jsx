@@ -20,7 +20,7 @@ function Products() {
     function handleSubmitFresas(event) {
         event.preventDefault()
         icp_backend.setSubTotal(175.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -29,7 +29,7 @@ function Products() {
     function handleSubmitCesar(event) {
         event.preventDefault()
         icp_backend.setSubTotal(150.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -38,7 +38,7 @@ function Products() {
     function handleSubmitTe(event) {
         event.preventDefault()
         icp_backend.setSubTotal(70.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -47,7 +47,7 @@ function Products() {
     function handleSubmitNaranjada(event) {
         event.preventDefault()
         icp_backend.setSubTotal(45.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -56,7 +56,7 @@ function Products() {
     function handleSubmitLimonada(event) {
         event.preventDefault()
         icp_backend.setSubTotal(60.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -65,7 +65,7 @@ function Products() {
     function handleSubmitPepino(event) {
         event.preventDefault()
         icp_backend.setSubTotal(70.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -73,7 +73,7 @@ function Products() {
     function handleSubmitAlfredo(event) {
         event.preventDefault()
         icp_backend.setSubTotal(180.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -81,7 +81,7 @@ function Products() {
     function handleSubmitPollo(event) {
         event.preventDefault()
         icp_backend.setSubTotal(200.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -89,7 +89,7 @@ function Products() {
     function handleSubmitCamarones(event) {
         event.preventDefault()
         icp_backend.setSubTotal(190.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -97,7 +97,7 @@ function Products() {
     function handleSubmitHclasica(event) {
         event.preventDefault()
         icp_backend.setSubTotal(170.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -105,7 +105,7 @@ function Products() {
     function handleSubmitHpollo(event) {
         event.preventDefault()
         icp_backend.setSubTotal(190.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }
@@ -113,7 +113,7 @@ function Products() {
     function handleSubmitHvegetariana(event) {
         event.preventDefault()
         icp_backend.setSubTotal(190.0).then((subTotal) => {
-            alert("The subtotal is " + subTotal);
+            alert("El subtotal es " + subTotal);
         });
         return false;
     }

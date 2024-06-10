@@ -2,8 +2,6 @@ import { useState } from 'react';
 import Products from './components/products';
 import { icp_backend } from 'declarations/icp_backend';
 
-import nav from "./components/images/nav.jpg";
-
 function App() {
 
   window.onscroll = function() {scrollFunction()};
@@ -84,7 +82,7 @@ function App() {
             <h2 className="waiter-name"><section id="setTableName">{setTableName}</section></h2>
         </div>
         <div class="welcome-slogan">
-            <div><h1 class="welcome-node-nosh">Welcome to NODE-NOSH</h1></div>
+            <div><h1 class="welcome-node-nosh">NODE-NOSH</h1></div>
             <div><p class="slogan-node-nosh">"El mejor lugar para disfrutar de una buena comida".</p></div>
         </div>
     
@@ -134,22 +132,11 @@ function App() {
         <Products />
 
       </div>
-        <div className="waiter-contaner">
-            <div>
-                <h2 className="waiter-text">¿Listo para ordenar?</h2>
-            </div>
-            <div className="input-group mb-3 waiter-input">
-                <input type="text" className="form-control waiter-input-design" placeholder="Añade a tu orden el nombre de tu mesero" aria-label="Añade a tu orden el nombre de tu mesero" aria-describedby="basic-addon2" />
-                <span className="btn btn-primary input-group-text waiter-button " id="basic-addon2">✔</span>
-            </div>
-        </div>
-        {//<!-- ESTA PARTE NO SE SI SEA NECESARIA -->
-        }
         
         <div className="buttons">
       
             <div className="finish-button">
-                <button type="button" onClick={finishDay} className="btn btn-primary finish-design">Finalizar dia</button>
+              <button type="button" onClick={finishOrder} class="btn btn-primary order-design">Terminar orden</button>
             </div>
 
         </div>
