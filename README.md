@@ -1,17 +1,8 @@
-# icp
+# node_nosh_restaurant
 
-Welcome to your new icp project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Este repositorio contiene el proyecto node_nosh_restaurant, desarrollado específicamente para una certificación en Motoko. La aplicación sirve como página principal de un restaurante, donde los clientes pueden ver el menú, añadir ítems a una orden y enviarla a la cocina. Además, el monto de cada orden es registrado para que, al finalizar el día, los encargados del restaurante puedan corroborar las ventas. Este proyecto demuestra la integración de Motoko en una aplicación práctica y funcional para la gestión de pedidos en un entorno de restaurante.
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
-
-To learn more before you start working with icp, see the following documentation available online:
-
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
-
-If you want to start working on your project right away, you might want to try the following commands:
+Important project commands:
 
 ```bash
 cd icp/
